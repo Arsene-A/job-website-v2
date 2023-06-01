@@ -15,13 +15,21 @@
 
   </head>
   <body>
+    {% include 'nav.html' %}
     <div class="container">
         <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
         <img class="img-fluid" id="banner" src="https://job-website--arseneaizansi.repl.co/static/banner.jpeg">
         <h2 class="text-center mt-2 mb-4">About Arsonval</h2>
+      <div class="row">
+        <div class="col-md-7">
         <p class="lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate mi sit amet mauris commodo quis imperdiet massa. Habitant morbi tristique senectus et netus et. Eleifend donec pretium vulputate sapien nec sagittis. Id velit ut tortor pretium viverra suspendisse potenti. In nulla posuere sollicitudin aliquam ultrices sagittis orci a. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Proin fermentum leo vel orci porta. Tellus orci ac auctor augue mauris augue neque gravida in. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Ornare lectus sit amet est placerat in egestas erat. Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Arcu dui vivamus arcu felis. In cursus turpis massa tincidunt dui ut ornare lectus sit. Convallis posuere morbi leo urna molestie at elementum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate mi sit amet mauris commodo quis imperdiet massa. Habitant morbi tristique senectus et netus et. Eleifend donec pretium vulputate sapien nec sagittis. Id velit ut tortor pretium viverra suspendisse potenti. In nulla posuere sollicitudin aliquam ultrices sagittis orci a. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Proin fermentum leo vel orci porta. Tellus orci ac auctor augue mauris augue neque gravida in. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Ornare lectus sit amet est placerat in egestas erat. Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Arcu dui vivamus arcu felis. In cursus turpis massa tincidunt dui ut ornare lectus sit. Convallis posuere morbi leo urna molestie at elementum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
+        </div>
+        <div class="d-none d-md-block col-md-5">
+          <img class="img-fluid" src="/static/people.jpg" style=" border-radius:4px;">
+        </div>
+      </div>
         <h2 class="text-center mt-2 mb-4">Open Positions</h2>
       <div>         
           {% for job in jobs%}
@@ -29,9 +37,9 @@
           {% endfor %}
       </div>
         <div class="text-center">
-          <button class="btn btn-primary btn-lg">Contact Us</button>
-          <p class="mt-4">Copyright 2023, Arsonval</p>
+          <a class="btn btn-primary btn-lg" href=" mailto:hello@arsonval.ai?subject=Question%20about%20Job%20Opening&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E%0D%0A ">Contact Us</a>
         </div>
-    </div>        
+    </div>
+    {% include 'footer.html' %}
   </body>
 </html>

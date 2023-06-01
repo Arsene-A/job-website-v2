@@ -16,14 +16,18 @@
   </head>
   <body>
     <div class="container">
-        <h1 class="text-center mt-2 mb-4">Arsonval Careers</h1>
+        <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
         <img class="img-fluid" id="banner" src="https://job-website--arseneaizansi.repl.co/static/banner.jpeg">
         <h2 class="text-center mt-2 mb-4">About Arsonval</h2>
         <p class="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate mi sit amet mauris commodo quis imperdiet massa. Habitant morbi tristique senectus et netus et. Eleifend donec pretium vulputate sapien nec sagittis. Id velit ut tortor pretium viverra suspendisse potenti. In nulla posuere sollicitudin aliquam ultrices sagittis orci a. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Proin fermentum leo vel orci porta. Tellus orci ac auctor augue mauris augue neque gravida in. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Ornare lectus sit amet est placerat in egestas erat. Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Arcu dui vivamus arcu felis. In cursus turpis massa tincidunt dui ut ornare lectus sit. Convallis posuere morbi leo urna molestie at elementum.
         </p>
         <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-        <p>Show the jobs here -- TODO</p>
+      <div>         
+          {% for job in jobs%}
+            {% include 'jobitem.html'%}
+          {% endfor %}
+      </div>
         <div class="text-center">
           <button class="btn btn-primary btn-lg">Contact Us</button>
           <p class="mt-4">Copyright 2023, Arsonval</p>
